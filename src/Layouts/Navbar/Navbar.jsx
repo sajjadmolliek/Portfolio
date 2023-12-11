@@ -10,10 +10,10 @@ const Navbar = () => {
           to="/"
           className={({ isActive, isPending }) =>
             isPending
-              ? "text-white font-semibold"
+              ? "text-white font-semibold "
               : isActive
-              ? " text-[#F00] underline font-semibold"
-              : "text-white font-semibold"
+              ? " text-[#F00]  font-semibold"
+              : "text-white font-semibold hover:text-[blue]"
           }
         >
           {" "}
@@ -27,8 +27,8 @@ const Navbar = () => {
             isPending
               ? "text-white font-semibold"
               : isActive
-              ? " text-[#F00] underline font-semibold"
-              : "text-white font-semibold"
+              ? " text-[#F00]  font-semibold"
+              : "text-white font-semibold hover:text-[blue]"
           }
         >
           Projects
@@ -41,8 +41,8 @@ const Navbar = () => {
             isPending
               ? "text-white font-semibold"
               : isActive
-              ? " text-[#F00] underline font-semibold"
-              : "text-white font-semibold"
+              ? " text-[#F00]  font-semibold"
+              : "text-white font-semibold hover:text-[blue]"
           }
         >
           Contact
