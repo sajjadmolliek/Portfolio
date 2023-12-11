@@ -1,29 +1,18 @@
 import { Helmet } from "react-helmet";
 import { FaFileDownload } from "react-icons/fa";
+import sajjad from "/src/assets/Fav-icone-image/sajjad.png";
+// import pdf from "/public/Sajjad_Resume.pdf"
+import axios from "axios";
+import fileDownload from "js-file-download";
+// import fileDownload from "js-file-download";
 
 const Home = () => {
-    const handleDownload = () => {
-        // Replace 'your-pdf-file.pdf' with the actual path to your PDF file
-        const pdfUrl = '/src/assets/Fav-icone-image/Sajjad_Resume.pdf';
-    
-        // Create a link element
-        const link = document.createElement('a');
-    
-        // Set the href attribute to the PDF file URL
-        link.href = pdfUrl;
-    
-        // Set the download attribute with the desired file name
-        link.download = 'Sajjad_Resume.pdf';
-    
-        // Append the link to the document body
-        document.body.appendChild(link);
-    
-        // Trigger a click on the link to start the download
-        link.click();
-    
-        // Remove the link from the document
-        document.body.removeChild(link);
-      };
+  const handleDownload = () => {
+    axios.get("https://resume-lac-one.vercel.app",{responseType:'blob'}).then((res) => {
+      console.log(res.data)
+      fileDownload(res.data, "Resume.pdf");
+    });
+  };
   return (
     <div>
       <Helmet title="Sajjad Molliek | Home"></Helmet>
@@ -40,16 +29,17 @@ const Home = () => {
             <br />
             MERN (MongoDB, Express.js, React.js, Node.js) stack.
           </p>
-          <button onClick={handleDownload} className=" p-4 flex items-center justify-center gap-2 font-semibold text-3xl  text-[#FF0000] mt-16 rounded-full bg-[#3A3A3A70]">
+
+          {/* <a href={pdf} download="Resume" rel="noopener noreferrer">Amake Click Kro</a> */}
+          <button
+            onClick={handleDownload}
+            className=" p-4 flex items-center justify-center gap-2 font-semibold text-3xl  text-[#FF0000] mt-16 rounded-full bg-[#3A3A3A70]"
+          >
             Get Resume <FaFileDownload className="text-2xl"></FaFileDownload>
           </button>
         </div>
         <div>
-          <img
-            className="w-[15rem] lg:w-[20rem] "
-            src="/src/assets/Fav-icone-image/sajjad.png"
-            alt="Sajjad"
-          />
+          <img className="w-[15rem] lg:w-[20rem] " src={sajjad} alt="Sajjad" />
         </div>
       </div>
     </div>
