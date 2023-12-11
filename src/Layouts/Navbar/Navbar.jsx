@@ -1,6 +1,5 @@
+import { FaFileDownload } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-
-// import logo from "../../src/assets/Logo.png";
 
 const Navbar = () => {
   const navitems = (
@@ -13,7 +12,7 @@ const Navbar = () => {
               ? "text-white font-semibold "
               : isActive
               ? " text-[#F00]  font-semibold"
-              : "text-white font-semibold hover:text-[blue]"
+              : "text-white font-semibold hover:underline"
           }
         >
           {" "}
@@ -28,7 +27,7 @@ const Navbar = () => {
               ? "text-white font-semibold"
               : isActive
               ? " text-[#F00]  font-semibold"
-              : "text-white font-semibold hover:text-[blue]"
+              : "text-white font-semibold hover:underline"
           }
         >
           Projects
@@ -42,7 +41,7 @@ const Navbar = () => {
               ? "text-white font-semibold"
               : isActive
               ? " text-[#F00]  font-semibold"
-              : "text-white font-semibold hover:text-[blue]"
+              : "text-white font-semibold hover:underline"
           }
         >
           Contact
@@ -51,47 +50,49 @@ const Navbar = () => {
     </>
   );
   return (
-    
-      <div className="flex h-16 items-center gap-10 lg:gap-0 justify-start lg:navbar  col-span-1  lg:justify-center w-[90%] mx-auto">
-       
-          <div className="dropdown  ">
-            <label tabIndex={0} className="text-white  lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-7 w-7"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm hover:text-[#CF8613] dropdown-content mt-3 z-[1] p-2 shadow bg-black rounded-box w-52"
-            >
-              {navitems}
-            </ul>
-          </div>
-          <h1 className="text-[#F00] font-Leckerli font-thin text-2xl ml-[10%]">
-            sajjadmolliek
-          </h1>
-       
-        <div className="navbar-end col-span-3 hidden lg:flex lg:w-[70%] ">
-          <ul className="gap-5 menu-horizontal  font-sans text-white px-1 ">
-            {navitems}
-          </ul>
-        </div>
-        <div className="navbar-end col-span-3 hidden lg:flex lg:w-[70%] ">
-          
-        </div>
+    <div className="flex h-16 items-center gap-10 lg:gap-0 justify-start lg:navbar col-span-1  lg:justify-center w-[90%] mx-auto">
+      <div className="dropdown  ">
+        <label tabIndex={0} className="text-white  lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h8m-8 6h16"
+            />
+          </svg>
+        </label>
+        <ul
+          tabIndex={0}
+          className="menu menu-sm hover:text-[#CF8613] dropdown-content mt-3 z-[1] p-2 shadow bg-black rounded-box w-52"
+        >
+          {navitems}
+        </ul>
       </div>
-   
+      <h1 className="text-[#F00] font-Leckerli font-thin text-2xl ml-[10%]">
+        sajjadmolliek
+      </h1>
+
+      <div className="navbar-end col-span-3 hidden lg:flex lg:w-[70%] ">
+        <ul className="gap-5 menu-horizontal text-lg font-sans text-white px-1 ">
+          {navitems}
+        </ul>
+      </div>
+      <div className="navbar-end col-span-3 lg:w-[70%] ">
+        {/* <button className=" p-4 flex gap-2 font-semibold text-lg mr-[10%] text-[#FF0000] mt-4 rounded-full bg-[#3A3A3A70]">
+            Hire me &gt;&gt;
+          </button> */}
+        <button className="btn btn-outline text-[#FF0000] text-lg mt-4 mr-[10%] bg-[#3A3A3A70]">
+          Hire me &gt;&gt;
+        </button>
+      </div>
+    </div>
   );
 };
 
