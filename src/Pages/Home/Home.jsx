@@ -7,6 +7,7 @@ import Skills from "./Skills";
 import ProjectsDisplay from "./ProjectsDisplay";
 import Qualification from "./Qualification";
 import Services from "./Services";
+import ConnectWithMe from "./ConnectWithMe";
 
 const Home = () => {
   const handleDownload = () => {
@@ -50,6 +51,7 @@ const Home = () => {
       <Qualification/>
       <ProjectsDisplay/>
       <Services/>
+      <ConnectWithMe/>
     </div>
   );
 };

@@ -38,4 +38,5 @@ const HeadingStyle = ({heading}) => {
   );
 };
 
+
 export default HeadingStyle;

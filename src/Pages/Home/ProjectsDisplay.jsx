@@ -21,14 +21,15 @@ const ProjectsDisplay = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+        
+        navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide className="p-4">
+        <SwiperSlide className="p-4" >
           <h1 className="text-white text-center text-3xl md:text-4xl mb-6">Project Name Forum</h1>
           <h1 className="text-white text-center text-xs md:text-sm lg:text-base">This is Use to post any thing depend on the category and give like and comments to each others</h1>
-          <img src={forum} alt="Forum" className="mt-10 w-[72rem] mx-auto" />
+          <img src={forum} alt="Forum" className="mt-10 w-[72rem] mx-auto " />
         </SwiperSlide>
         <SwiperSlide className="p-4">
           <h1 className="text-white text-center text-3xl md:text-4xl mb-6">Project Name Assignment Management</h1>

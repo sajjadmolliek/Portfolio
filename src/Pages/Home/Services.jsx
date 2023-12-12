@@ -19,7 +19,7 @@ const Services = () => {
           effect={"cards"}
           grabCursor={true}
           modules={[EffectCards]}
-          className="mySwiper  w-[20rem] h-[10rem] text-white text-center"
+          className="mySwiper  w-[15rem] h-[10rem] text-white text-center"
         >
           <SwiperSlide className="bg-red-600  rounded-3xl">
             <div className="flex gap-5 justify-center flex-col items-center h-[10rem]">
