@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import HeadingStyle from "../../Components/HeadingStyle/HeadingStyle";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const form = useRef();
@@ -17,7 +18,16 @@ const Contact = () => {
         "2SE3nZmcRSJq5x233"
       )
       .then(
-        () => {},
+        () => {
+          form.current.reset();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        },
         (error) => {
           console.log(error.text);
         }
@@ -27,7 +37,7 @@ const Contact = () => {
     <div>
       <Helmet title="Sajjad Molliek | Contact"></Helmet>
       <div className="mt-20 mb-10">
-      <HeadingStyle heading={"Contact With Me"}/>
+        <HeadingStyle heading={"Contact With Me"} />
       </div>
       <div className="text-white mb-10">
         <form ref={form} onSubmit={sendEmail}>
@@ -66,14 +76,18 @@ const Contact = () => {
                 <textarea
                   name="message"
                   className="textarea textarea-bordered bg-black"
-                  placeholder="Bio"
+                  placeholder="Massage"
                 ></textarea>
               </label>
             </div>
           </div>
 
           <div className="flex justify-center mt-20">
-          <input type="submit" value="Send" className="bg-[#FF0000] px-4 py-1 rounded-md mr-2 w-[20rem]"/>
+            <input
+              type="submit"
+              value="Send"
+              className="bg-[#FF0000] px-4 py-1 rounded-md mr-2 w-[20rem]"
+            />
           </div>
         </form>
       </div>

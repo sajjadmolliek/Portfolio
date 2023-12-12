@@ -8,7 +8,7 @@ const Projects = () => {
       <div className="mt-20 mb-10">
         <HeadingStyle heading={"My Latest 3 Projects"} />
       </div>
-      <div className="flex justify-center items-center gap-10 mb-10">
+      <div className="flex justify-center flex-col lg:flex-row items-center gap-10 mb-10">
         <div>
           <iframe
             src="https://forum-b8cea.web.app/"
