@@ -4,6 +4,7 @@ import sajjad from "/src/assets/Fav-icone-image/sajjad.png";
 // import pdf from "/public/Sajjad_Resume.pdf"
 import axios from "axios";
 import fileDownload from "js-file-download";
+import Skills from "./Skills";
 // import fileDownload from "js-file-download";
 
 const Home = () => {
@@ -42,6 +43,8 @@ const Home = () => {
           <img className="w-[15rem] lg:w-[20rem] " src={sajjad} alt="Sajjad" />
         </div>
       </div>
+
+      <Skills></Skills>
     </div>
   );
 };

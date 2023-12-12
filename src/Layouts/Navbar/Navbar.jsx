@@ -76,7 +76,7 @@ const Navbar = () => {
         </ul>
       </div>
       <h1 className="text-[#F00] font-Leckerli font-thin text-2xl ml-[10%]">
-        sajjadmolliek
+        SajjadHossain
       </h1>
 
       <div className="navbar-end col-span-3 hidden lg:flex lg:w-[70%] ">
@@ -85,9 +85,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end col-span-3 lg:w-[70%] ">
-        {/* <button className=" p-4 flex gap-2 font-semibold text-lg mr-[10%] text-[#FF0000] mt-4 rounded-full bg-[#3A3A3A70]">
-            Hire me &gt;&gt;
-          </button> */}
+     
         <button className="btn btn-outline text-[#FF0000] text-lg mt-4 mr-[10%] bg-[#3A3A3A70]">
           Hire me &gt;&gt;
         </button>
