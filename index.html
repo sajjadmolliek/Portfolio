@@ -2,7 +2,11 @@
 <html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/Fav-icone-image/favicone.png" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/src/assets/Fav-icone-image/favicone.png"
+    />
     <!-- Google font Kalnia & Leckerli One-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,13 +23,22 @@
       .font-Leckerli {
         font-family: "Leckerli One";
       }
-      .bg-color{
+      .bg-color {
         background-color: #232323;
       }
     </style>
   </head>
-  <body class="font-Kalnia bg-color" >
+  <body class="font-Kalnia bg-color">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("2SE3nZmcRSJq5x233");
+      })();
+    </script>
   </body>
 </html>

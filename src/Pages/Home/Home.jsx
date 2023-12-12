@@ -6,6 +6,7 @@ import fileDownload from "js-file-download";
 import Skills from "./Skills";
 import ProjectsDisplay from "./ProjectsDisplay";
 import Qualification from "./Qualification";
+import Services from "./Services";
 
 const Home = () => {
   const handleDownload = () => {
@@ -48,6 +49,7 @@ const Home = () => {
       <Skills/>
       <Qualification/>
       <ProjectsDisplay/>
+      <Services/>
     </div>
   );
 };

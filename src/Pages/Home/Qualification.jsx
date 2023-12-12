@@ -5,28 +5,29 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import StepContent from "@mui/material/StepContent";
 import { useState } from "react";
-
-
+import { FaUniversity } from "react-icons/fa";
+import { FaSchoolCircleCheck } from "react-icons/fa6";
+import { IoSchool } from "react-icons/io5";
 
 const Qualification = () => {
   const steps = [
     {
-      label: "Under-Graduate",
+      label: `Under-Graduate `,
       description: `University: Green University Of Bangladesh`,
       subject: `Department: B.Sc. in Computer Science & Engineering`,
-      year: `Session: 2021- present `
+      year: `Session: 2021- present `,
     },
     {
       label: "Higher Secondary Certificate",
       description: `College: Govt. Bangabandhu College`,
       subject: `Group: Science`,
-      year: `Session: 2017- 2019 `
+      year: `Session: 2017- 2019 `,
     },
     {
       label: "Secondary School Certificate",
       description: `School: S.M. Model High School`,
       subject: `Group: Science`,
-      year: `Session: 2016- 2017 `
+      year: `Session: 2016- 2017 `,
     },
   ];
 
@@ -54,11 +55,15 @@ const Qualification = () => {
                 <StepLabel
                   optional={
                     index === 2 ? (
-                      <p className=" bg-clip-text text-transparent bg-gradient-to-r from-[#FF0000] to-white">Last step</p>
+                      <p className=" bg-clip-text text-transparent bg-gradient-to-r from-[#FF0000] to-white">
+                        Last step
+                      </p>
                     ) : null
                   }
                 >
-                  <p className="text-white">{step.label}</p>
+                  <p className="text-white flex items-center gap-1">
+                    {step.label} {index === 0 ? <IoSchool />:index === 1 ? <FaUniversity />:<FaSchoolCircleCheck />}
+                  </p>
                 </StepLabel>
                 <StepContent>
                   <p className="text-white text-xl">{step.description}</p>
@@ -69,15 +74,13 @@ const Qualification = () => {
                       <button
                         className="bg-[#FF0000] px-4 py-1 rounded-md mr-2"
                         onClick={handleNext}
-                        
                       >
                         {index === steps.length - 1 ? "Finish" : "Continue"}
                       </button>
                       <button
-                      className="border-[#FF0000] border-2 px-4 py-1 rounded-md"
+                        className="border-[#FF0000] border-2 px-4 py-1 rounded-md"
                         disabled={index === 0}
                         onClick={handleBack}
-                        
                       >
                         Back
                       </button>
@@ -89,13 +92,17 @@ const Qualification = () => {
           </Stepper>
           {activeStep === steps.length && (
             <>
-              <p>
-                All steps completed - you&apos;re finished
-              </p>
-              <button onClick={handleReset} className="border-[#FF0000] border-2 px-4 py-1 rounded-md mr-2">
+              <p>All steps completed - you&apos;re finished</p>
+              <button
+                onClick={handleReset}
+                className="border-[#FF0000] border-2 px-4 py-1 rounded-md mr-2"
+              >
                 Go top
               </button>
-              <button onClick={handleBack} className="bg-[#FF0000] px-4 py-1 rounded-md">
+              <button
+                onClick={handleBack}
+                className="bg-[#FF0000] px-4 py-1 rounded-md"
+              >
                 Back
               </button>
             </>
