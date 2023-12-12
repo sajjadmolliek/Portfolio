@@ -1,4 +1,3 @@
-import { FaFileDownload } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -50,12 +49,12 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="flex h-16 items-center gap-10 lg:gap-0 justify-start lg:navbar col-span-1  lg:justify-center w-[90%] mx-auto">
+    <div className="flex h-16 items-center gap-10 lg:gap-0 justify-start lg:navbar col-span-1  lg:justify-center md:w-[95%] mx-auto">
       <div className="dropdown  ">
         <label tabIndex={0} className="text-white  lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-7"
+            className="h-7 w-7 ml-5 md:ml-0"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -75,7 +74,7 @@ const Navbar = () => {
           {navitems}
         </ul>
       </div>
-      <h1 className="text-[#F00] font-Leckerli font-thin text-2xl ml-[10%]">
+      <h1 className="text-[#F00] font-Leckerli font-thin text-2xl">
         SajjadHossain
       </h1>
 
@@ -86,7 +85,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end col-span-3 lg:w-[70%] ">
      
-        <button className="btn btn-outline text-[#FF0000] text-lg mt-4 mr-[10%] bg-[#3A3A3A70]">
+        <button className="btn btn-outline text-[#FF0000] text-lg mt-4  bg-[#3A3A3A70]">
           Hire me &gt;&gt;
         </button>
       </div>

@@ -1,24 +1,26 @@
 import { Helmet } from "react-helmet";
 import { FaFileDownload } from "react-icons/fa";
 import sajjad from "/src/assets/Fav-icone-image/sajjad.png";
-// import pdf from "/public/Sajjad_Resume.pdf"
 import axios from "axios";
 import fileDownload from "js-file-download";
 import Skills from "./Skills";
-// import fileDownload from "js-file-download";
+import ProjectsDisplay from "./ProjectsDisplay";
+import Qualification from "./Qualification";
 
 const Home = () => {
   const handleDownload = () => {
-    axios.get("https://resume-lac-one.vercel.app",{responseType:'blob'}).then((res) => {
-      console.log(res.data)
-      fileDownload(res.data, "Resume.pdf");
-    });
+    axios
+      .get("https://resume-lac-one.vercel.app", { responseType: "blob" })
+      .then((res) => {
+        console.log(res.data);
+        fileDownload(res.data, "Resume.pdf");
+      });
   };
   return (
     <div>
       <Helmet title="Sajjad Molliek | Home"></Helmet>
 
-      <div className="flex flex-col gap-10 md:gap-0 md:flex-row text-white justify-between w-[80%] mx-auto my-10 items-center">
+      <div className="flex flex-col gap-10 md:gap-0 md:flex-row text-white justify-between w-[95%] mx-auto my-10 items-center p-4 md:p-0">
         <div>
           <h1 className="text-xl md:text-4xl lg:text-7xl">
             <span className="block mb-2">Hi, I&apos;m</span> Sajjad Hossain
@@ -31,10 +33,9 @@ const Home = () => {
             MERN (MongoDB, Express.js, React.js, Node.js) stack.
           </p>
 
-          {/* <a href={pdf} download="Resume" rel="noopener noreferrer">Amake Click Kro</a> */}
           <button
             onClick={handleDownload}
-            className=" p-4 flex items-center justify-center gap-2 font-semibold text-3xl  text-[#FF0000] mt-16 rounded-full bg-[#3A3A3A70]"
+            className=" p-4 flex items-center justify-center gap-2 font-semibold text-xl lg:text-3xl  text-[#FF0000] mt-16 rounded-full bg-[#3A3A3A70]"
           >
             Get Resume <FaFileDownload className="text-2xl"></FaFileDownload>
           </button>
@@ -44,7 +45,9 @@ const Home = () => {
         </div>
       </div>
 
-      <Skills></Skills>
+      <Skills/>
+      <Qualification/>
+      <ProjectsDisplay/>
     </div>
   );
 };

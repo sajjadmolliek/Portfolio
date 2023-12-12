@@ -10,21 +10,21 @@ const Skills = () => {
       <div className="flex justify-center flex-col lg:flex-row items-center lg:items-start w-full gap-10 mt-10">
         {/* Front-end */}
       <div className="max-w-[30rem]">
-        <h1 className="text-white text-4xl text-center mb-10">
+        <h1 className="text-white text-2xl lg:text-4xl text-center mb-10">
           Front-End Technology
         </h1>
         <Frontend></Frontend>
       </div>
         {/* Front-end */}
       <div className="max-w-[30rem]">
-        <h1 className="text-white text-4xl text-center mb-10">
+        <h1 className="text-white text-2xl lg:text-4xl text-center mb-10">
           Backend Technology
         </h1>
         <Backend></Backend>
       </div>
       {/* Backend */}
       <div className="max-w-[30rem]">
-        <h1 className="text-white text-4xl text-center mb-10">
+        <h1 className="text-white text-2xl lg:text-4xl text-center mb-10">
           Others Technology
         </h1>
         <Others></Others>
