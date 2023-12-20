@@ -84,10 +84,11 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end col-span-3 lg:w-[70%] ">
-     
-        <button className="btn btn-outline text-[#FF0000] text-lg mt-4  bg-[#3A3A3A70]">
-          Hire me &gt;&gt;
-        </button>
+        <a href="#hire">
+          <button className="btn btn-outline text-[#FF0000] text-lg mt-4  bg-[#3A3A3A70]">
+            Hire me &gt;&gt;
+          </button>
+        </a>
       </div>
     </div>
   );

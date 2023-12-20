@@ -8,7 +8,7 @@ import MailIcon from '@mui/icons-material/Mail';
 
 const ConnectWithMe = () => {
   return (
-    <div>
+    <div id="hire">
       <div className="mt-20 mb-10">
         <HeadingStyle heading={"Touch With Me"}></HeadingStyle>
       </div>
