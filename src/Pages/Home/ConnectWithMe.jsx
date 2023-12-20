@@ -43,7 +43,7 @@ const ConnectWithMe = () => {
             </p>
             <p className="bg-[black] text-white text-left rounded-lg p-4 md:w-[25rem]">
               <a
-                href="https://www.linkedin.com/in/sajjad-molliek-51612220b/"
+                href="https://www.linkedin.com/in/md-sajjad-hossain-51612220b/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

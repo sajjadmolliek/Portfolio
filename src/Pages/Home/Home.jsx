@@ -8,6 +8,7 @@ import ProjectsDisplay from "./ProjectsDisplay";
 import Qualification from "./Qualification";
 import Services from "./Services";
 import ConnectWithMe from "./ConnectWithMe";
+import Counter from "./Counter";
 
 const Home = () => {
   const handleDownload = () => {
@@ -52,6 +53,7 @@ const Home = () => {
       <ProjectsDisplay/>
       <Services/>
       <ConnectWithMe/>
+      <Counter/>
     </div>
   );
 };
