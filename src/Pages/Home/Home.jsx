@@ -15,8 +15,7 @@ const Home = () => {
     axios
       .get("https://resume-lac-one.vercel.app", { responseType: "blob" })
       .then((res) => {
-        console.log(res.data);
-        fileDownload(res.data, "Sajjad_Resume.pdf");
+        fileDownload(res.data, "Resume.pdf");
       });
   };
   return (
