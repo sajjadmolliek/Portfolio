@@ -4,13 +4,14 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 ChartJS.register(ArcElement, Tooltip, Legend);
 const Frontend = () => {
   const data = {
-    labels: ["React.js","JavaScript", "Tailwind CSS", "MUI", "CSS3","HTML5"],
+    labels: ["React.js", "Next.js","JavaScript", "Tailwind CSS", "MUI", "CSS3","HTML5"],
     datasets: [
       {
         label: "Percentage %",
-        data: [16, 16, 18,16, 16, 18],
+        data: [13,8, 13, 16,16, 16, 18,],
         backgroundColor: [
             "#3C5037",
+            "white",
             "#A5236E",
             "#419BD2",
             "#782D2D",
@@ -19,6 +20,7 @@ const Frontend = () => {
         ],
         borderColor: [
             "#3C5037",
+            "#E6E6E6",
             "#A5236E",
             "#419BD2",
             "#782D2D",
